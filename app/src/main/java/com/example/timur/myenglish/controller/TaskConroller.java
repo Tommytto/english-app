@@ -34,14 +34,14 @@ public class TaskConroller extends Activity {
 
         switch (randomTask) {
             case TASK_TRANSLATE:
-                Intent intentTask1 = new Intent(this, TaskActivity_1.class);
+                Intent intentTask1 = new Intent(this, TaskActivity_2.class);
                 intentTask1.putExtra("word", "hello");
                 break;
             case TASK_FILL_GAPS:
-                Intent intentTask2 = new Intent(this, TaskActivity_1.class);
+                Intent intentTask2 = new Intent(this, TaskActivity_2.class);
                 break;
             default:
-                Intent intentTask3 = new Intent(this, TaskActivity_1.class);
+                Intent intentTask3 = new Intent(this, TaskActivity_2.class);
                 break;
         }
 
