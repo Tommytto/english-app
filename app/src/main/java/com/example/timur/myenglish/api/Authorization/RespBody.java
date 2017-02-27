@@ -9,6 +9,10 @@ public class RespBody {
     @Expose
     private Integer isUser;
 
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+
     public Integer getIsUser() {
         return isUser;
     }
@@ -17,4 +21,11 @@ public class RespBody {
         this.isUser = isUser;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }
