@@ -1,10 +1,9 @@
 package com.example.timur.myenglish.listeners;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
 
-import com.example.timur.myenglish.view.TaskActivity_2;
+import com.example.timur.myenglish.view.TaskWButActivity;
 
 /**
  * Created by slava on 28.02.2017.
@@ -13,9 +12,9 @@ import com.example.timur.myenglish.view.TaskActivity_2;
 public class AnswerListener implements View.OnClickListener {
     private int right;
     private int current;
-    private TaskActivity_2 activity;
+    private TaskWButActivity activity;
 
-    public AnswerListener(int right, int current, TaskActivity_2 activity) {
+    public AnswerListener(int right, int current, TaskWButActivity activity) {
         this.right = right;
         this.current = current;
         this.activity = activity;
@@ -34,8 +33,10 @@ public class AnswerListener implements View.OnClickListener {
             activity.getButtons()[i].setEnabled(false);
         }
 
-        Intent intent = new Intent(activity, TaskActivity_2.class);
-        activity.startActivity(intent);
+        new UChooseListener(activity).onClick(v);
+
+//        Intent intent = new Intent(activity, TaskWButActivity.class);
+//        activity.startActivity(intent);
     }
 
 }

@@ -25,7 +25,7 @@
         <activity android:name=".view.TaskActivity_1">
 
         </activity>
-        <activity android:name=".view.TaskActivity_2"
+        <activity android:name=".view.TaskWButActivity"
             android:noHistory="true">
 
         </activity>
