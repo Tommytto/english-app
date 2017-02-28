@@ -3,9 +3,6 @@ package com.example.timur.myenglish.model;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by timur on 25.02.17.
@@ -24,7 +21,7 @@ public class DBConnection extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        Log.d(TAG, "CREATING NEW DATABASE" + new SQueryFactory(context).getWord());
+//        Log.d(TAG, "CREATING NEW DATABASE" + new SQueryFactory(context).getWord());
         db.execSQL("CREATE TABLE words (" +
                 " num INTEGER NOT NULL," +
                 " lang1 TEXT ," +

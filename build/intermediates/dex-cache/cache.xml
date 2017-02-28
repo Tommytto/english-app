@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
-        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.1_67dd8411c025f5081241a2f280d4fe871d99c773\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.1_d89de5094c16779732858e3b99f5b3f03597c299\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.1_67dd8411c025f5081241a2f280d4fe871d99c773\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ee82c7670cd3008b2205ed9ec86ecb327a6c96d0">
+        sha1="e6241662e5ed75271b177064c164b8f1450baa37">
         <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9bdbc0a20252239d0800858818fc6eec96e1c2a6\classes.dex" />
     </item>
     <item
@@ -160,7 +160,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="588f162459357b7863a5a36e11ac7ca4706d4b28">
+        sha1="329747fc72fd3efcd4380887a78c7aeac74996a3">
         <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_88970dd9665af6dd6d761ca25066467e76ad00a1\classes.dex" />
     </item>
     <item

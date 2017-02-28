@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by timur on 25.02.17.
@@ -16,7 +17,6 @@ public class SQueryFactory {
     public SQueryFactory(Context context) {
         //Подключение к базе данных
         db = new DBConnection(context).getWritableDatabase();
-
     }
 
     public Word getWord() {
@@ -34,7 +34,7 @@ public class SQueryFactory {
 
     public ArrayList<Word> getWords(Word word) {
         Cursor cursor = db.rawQuery(
-                "SELECT lang1 from words WHERE num != 0 AND num !=" + word.getNum() + " ORDER BY RANDOM() LIMIT 3;",
+                "SELECT * from words WHERE num != 0 AND num !=" + word.getNum() + " ORDER BY RANDOM() LIMIT 3;",
                 null);
         ArrayList<Word> words = new ArrayList<Word>();
         while (cursor.moveToNext()){
@@ -44,6 +44,8 @@ public class SQueryFactory {
                     cursor.getInt(6), cursor.getString(7),
                     cursor.getString(8), cursor.getString(9)));
         }
+        words.add(word);
+        Collections.shuffle(words);
         return words;
     }
 }

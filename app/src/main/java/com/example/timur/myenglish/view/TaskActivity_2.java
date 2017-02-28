@@ -8,7 +8,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.timur.myenglish.R;
+import com.example.timur.myenglish.listeners.AnswerListener;
 import com.example.timur.myenglish.model.SQueryFactory;
+import com.example.timur.myenglish.model.Word;
+
+import java.util.ArrayList;
 
 import static android.content.ContentValues.TAG;
 
@@ -17,28 +21,41 @@ import static android.content.ContentValues.TAG;
  */
 
 public class TaskActivity_2 extends Activity {
+    private Button[] buttons = new Button[4];
+
+    public Button[] getButtons() {
+        return buttons;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.task2_main);
 
-        Log.d(TAG, "TASKACTIVITY");
-
         SQueryFactory unitModel = new SQueryFactory(this);
-        Log.d(TAG, unitModel.getWord().getLang1());
+
+        Word word = unitModel.getWord();
+        ArrayList<Word> words = unitModel.getWords(word);
+        Log.d(TAG, "TaskActivity; Used word:" + word.getLang1());
         Intent intentParent = getIntent();
 
         TextView textTask = (TextView) findViewById(R.id.tvTaskDecription);
-
-        Button[] buttons = new Button[4];
 
         buttons[0] = (Button) findViewById(R.id.btnChoose1);
         buttons[1] = (Button) findViewById(R.id.btnChoose2);
         buttons[2] = (Button) findViewById(R.id.btnChoose3);
         buttons[3] = (Button) findViewById(R.id.btnChoose4);
 
-        textTask.setText(intentParent.getStringExtra("word"));
+
+        int right = -1;
+        for (int i = 0; i < 4; i++){
+            buttons[i].setText(words.get(i).getLang2());
+            if (words.get(i).equals(word))
+                right = i;
+            buttons[i].setOnClickListener(new AnswerListener(right, i, this));
+        }
+
+        textTask.setText(word.getLang1());
 
     }
 }
