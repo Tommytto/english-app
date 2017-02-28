@@ -3,6 +3,9 @@ package com.example.timur.myenglish.model;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by timur on 25.02.17.
@@ -21,6 +24,7 @@ public class DBConnection extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
+        Log.d(TAG, "CREATING NEW DATABASE" + new SQueryFactory(context).getWord());
         db.execSQL("CREATE TABLE words (" +
                 " num INTEGER NOT NULL," +
                 " lang1 TEXT ," +
@@ -37,7 +41,6 @@ public class DBConnection extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO words (num, lang1, def1, lang2, def2, synid, oppid, pos, sent1, sent2) VALUES (2, 'breach', 'an act of breaking, esp. an agreement', 'нарушение', '', 15, 0, 'n', '\"We have a security breach,\" the general said, his voice unsteady.', 'A breach of the covenant to repair gives the landlord an action for damages')");
         db.execSQL("INSERT INTO words (num, lang1, def1, lang2, def2, synid, oppid, pos, sent1, sent2) VALUES (3, 'displease', 'cause bad feelings', 'раздражать', '', 9, 0, 'v', 'Low returns will surely displease our investors.', '')");
         db.execSQL("INSERT INTO words (num, lang1, def1, lang2, def2, synid, oppid, pos, sent1, sent2) VALUES (4, 'enhance', 'increase, intensify, improve', 'усиливать', '', 0, 0, 'v', 'We need to enhance this equipment to be useful.', '')");
-
         this.dataBase = db;
     }
     @Override

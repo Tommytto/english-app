@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.example.timur.myenglish.R;
-import com.example.timur.myenglish.listeners.tvUnit;
+import com.example.timur.myenglish.listeners.UChooseListener;
 
 /**
  * Created by timur on 25.02.17.
@@ -19,6 +19,6 @@ public class UnitsActivity extends Activity {
 
         TextView tvUnit = (TextView) findViewById(R.id.tvUnit);
 
-        tvUnit.setOnClickListener(new tvUnit(this));
+        tvUnit.setOnClickListener(new UChooseListener(this));
     }
 }

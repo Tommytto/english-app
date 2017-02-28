@@ -9,13 +9,30 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.timur.myenglish.R;
-import com.example.timur.myenglish.listeners.btnSignIn;
+import com.example.timur.myenglish.listeners.SignInListener;
 
 /**
  * Created by timur on 25.02.17.
  */
 
-public class LoginActivity extends Activity {
+public class StartLoginActivity extends Activity {
+
+    private EditText etEmail;
+    private EditText etPassword;
+
+    public TextView getTvLoginHint() {
+        return tvLoginHint;
+    }
+
+    public EditText getEtPassword() {
+        return etPassword;
+    }
+
+    public EditText getEtEmail() {
+        return etEmail;
+    }
+
+    private TextView tvLoginHint;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,14 +40,14 @@ public class LoginActivity extends Activity {
 
         Button btnSignIn = (Button) findViewById(R.id.btnSignIn);
 
-        EditText etEmail = (EditText) findViewById(R.id.etEmail);
-        EditText etPassword = (EditText) findViewById(R.id.etPassword);
+        etEmail = (EditText) findViewById(R.id.etEmail);
+        etPassword = (EditText) findViewById(R.id.etPassword);
 
-        TextView tvLoginHint = (TextView) findViewById(R.id.tvLoginHint);
+        tvLoginHint = (TextView) findViewById(R.id.tvLoginHint);
 
         etPassword.setTypeface(Typeface.DEFAULT);
         etPassword.setTransformationMethod(new PasswordTransformationMethod());
 
-        btnSignIn.setOnClickListener(new btnSignIn(etEmail, etPassword, tvLoginHint, this));
+        btnSignIn.setOnClickListener(new SignInListener(this));
     }
 }

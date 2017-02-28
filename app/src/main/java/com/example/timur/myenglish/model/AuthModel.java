@@ -16,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AuthModel {
     private int isAuth;
-    private static final int FAIL_REQUEST = -1;
+    private static final int FAIL_REQUEST = -2;
     private static final int IS_USER = 1;
     private static final int IS_NOT_USER = 0;
 
