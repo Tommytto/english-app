@@ -19,10 +19,15 @@ import static android.content.ContentValues.TAG;
 
 /**
  * Created by timur on 18.02.17.
+ *
+ * Активити для заданий типа :
+ * 1. Cлово - перевод
+ * 2. Предложение с пропущенным словом
+ * 3. Слово - значение
  */
 
-public class TaskWButActivity extends Activity {
-    private static int NOT_IDENTIFIED = -1;
+public class TaskBtnActivity extends Activity {
+    private static final int NOT_IDENTIFIED = -1;
     private static final int TASK_TRANSLATE = 1;
     private static final int TASK_FILL_GAPS = 2;
     private static final int TASK_MEANING = 3;
@@ -36,19 +41,17 @@ public class TaskWButActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.task2_main);
+        setContentView(R.layout.task1_main);
 
-        Intent intent = getIntent();
-        int mode = intent.getIntExtra("mode", NOT_IDENTIFIED);
-
-        SQueryFactory unitModel = new SQueryFactory(this);
-
-        Word word = unitModel.getWord();
-        ArrayList<Word> words = unitModel.getWords(word);
-        Log.d(TAG, "TaskActivity; Used word:" + word.getLang1());
         Intent intentParent = getIntent();
+        int mode = intentParent.getIntExtra("mode", NOT_IDENTIFIED);
 
-        TextView textTask = (TextView) findViewById(R.id.tvTaskDecription);
+        //Получаем данные с контроллера
+        ArrayList<Word> words = (ArrayList<Word>) intentParent.getExtras().getSerializable("words");
+        Word word = (Word) intentParent.getExtras().getSerializable("word");
+        Log.d(TAG, "HERE " + words);
+        TextView taskDescription = (TextView) findViewById(R.id.tvTaskDecription);
+        TextView taskText = (TextView) findViewById(R.id.tvSentence);
 
         buttons[0] = (Button) findViewById(R.id.btnChoose1);
         buttons[1] = (Button) findViewById(R.id.btnChoose2);
@@ -58,33 +61,39 @@ public class TaskWButActivity extends Activity {
         Random rnd = new Random();
 
         int right = -1;
-        switch (mode){
+        switch (mode) {
             case TASK_TRANSLATE:
                 for (int i = 0; i < 4; i++){
                     buttons[i].setText(words.get(i).getLang2());
-                    if (words.get(i).equals(word))
+                    if (words.get(i).equals(word)) {
                         right = i;
+                    }
                     buttons[i].setOnClickListener(new AnswerListener(right, i, this));
                 }
-                textTask.setText(word.getLang1());
+                taskDescription.setText("Choose right translate");
+                taskText.setText(word.getLang1());
                 break;
+
             case TASK_FILL_GAPS:
                 for (int i = 0; i < 4; i++){
                     buttons[i].setText(words.get(i).getLang1());
-                    if (words.get(i).equals(word))
+                    if (words.get(i).equals(word)) {
                         right = i;
+                    }
                     buttons[i].setOnClickListener(new AnswerListener(right, i, this));
                 }
                 if (!word.getSent2().equals("")){
                     int i = rnd.nextInt(2);
                     if (i == 0)
-                        textTask.setText(word.getSent1().replace(word.getLang1(), "___"));
+                        taskText.setText(word.getSent1().replace(word.getLang1(), "___"));
                     else
-                        textTask.setText(word.getSent2().replace(word.getLang1(), "___"));
+                        taskText.setText(word.getSent2().replace(word.getLang1(), "___"));
+                } else {
+                    taskText.setText(word.getSent1());
                 }
-                else
-                    textTask.setText(word.getSent1());
+                taskDescription.setText("Fill words in the gaps");
                 break;
+
             case TASK_MEANING:
                 for (int i = 0; i < 4; i++){
                     buttons[i].setText(words.get(i).getLang1());
@@ -92,7 +101,8 @@ public class TaskWButActivity extends Activity {
                         right = i;
                     buttons[i].setOnClickListener(new AnswerListener(right, i, this));
                 }
-                textTask.setText(word.getDef1());
+                taskDescription.setText("Select the word in its meaning");
+                taskText.setText(word.getDef1());
                 break;
         }
 

@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/layoutWords">
 
-</LinearLayout>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="300dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:id="@+id/tvSentence"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Button3"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:id="@+id/btnChoose3"
+        android:layout_marginBottom="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/tvSentence"
+        android:layout_alignStart="@+id/tvSentence" />
+
+    <TextView
+        android:text="TextView"
+        android:textAlignment="center"
+        android:layout_width="300dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:id="@+id/tvTaskDecription"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Button1"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:id="@+id/btnChoose1"
+        android:layout_above="@+id/btnChoose3"
+        android:layout_alignLeft="@+id/btnChoose3"
+        android:layout_alignStart="@+id/btnChoose3"
+        android:layout_marginBottom="26dp" />
+
+    <Button
+        android:text="Button4"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:id="@+id/btnChoose4"
+        android:layout_below="@+id/btnChoose1"
+        android:layout_alignRight="@+id/tvSentence"
+        android:layout_alignEnd="@+id/tvSentence" />
+
+    <Button
+        android:text="Button2"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:id="@+id/btnChoose2"
+        android:layout_alignBottom="@+id/btnChoose1"
+        android:layout_alignLeft="@+id/btnChoose4"
+        android:layout_alignStart="@+id/btnChoose4"
+        android:layout_alignTop="@+id/btnChoose1"
+        android:layout_alignRight="@+id/btnChoose4"
+        android:layout_alignEnd="@+id/btnChoose4" />
+</RelativeLayout>

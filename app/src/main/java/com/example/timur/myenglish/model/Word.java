@@ -1,10 +1,12 @@
 package com.example.timur.myenglish.model;
 
+import java.io.Serializable;
+
 /**
  * Created by slava on 28.02.2017.
  */
 
-public class Word {
+public class Word implements Serializable {
     private int num;
     private String lang1;
     private String def1;
