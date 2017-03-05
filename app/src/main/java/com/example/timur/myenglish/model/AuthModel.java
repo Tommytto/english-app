@@ -1,14 +1,29 @@
 package com.example.timur.myenglish.model;
 
+import android.app.Activity;
+import android.nfc.Tag;
+import android.util.Log;
+
 import com.example.timur.myenglish.api.Authorization.Action;
 import com.example.timur.myenglish.api.Authorization.ReqBody;
 import com.example.timur.myenglish.api.Authorization.RespBody;
+import com.example.timur.myenglish.listeners.SignInListener;
 
+import java.io.IOException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by timur on 25.02.17.
@@ -20,8 +35,11 @@ public class AuthModel {
     private static final int IS_USER = 1;
     private static final int IS_NOT_USER = 0;
 
+    public AuthModel () {
+    }
+
     public int userAuth (String login, String password) {
-        ReqBody req = new ReqBody(login, password);
+        ReqBody req = new ReqBody(login, password, "ZhmCGGXeey");
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://the-people.ru")
@@ -34,6 +52,8 @@ public class AuthModel {
         call.enqueue(new Callback<RespBody>() {
             public void onResponse(Call<RespBody> call, Response<RespBody> response) {
                 isAuth = response.body().getIsUser();
+                SignInListener.onSuccess(isAuth);
+                Log.d(TAG, "hello " + isAuth);
             }
             public void onFailure(Call<RespBody> call, Throwable t) {
                 isAuth = FAIL_REQUEST;

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.timur.myenglish.model.AuthModel;
+import com.example.timur.myenglish.view.AdminActivity;
 import com.example.timur.myenglish.view.StartLoginActivity;
 import com.example.timur.myenglish.view.UnitsActivity;
 
@@ -22,7 +23,7 @@ public class SignInListener implements View.OnClickListener {
     private static final int IS_USER = 0;
     private static final int IS_ADMIN = 1;
     private static final int IS_NOT_USER = -1;
-    private StartLoginActivity activity;
+    private static StartLoginActivity activity;
     private AuthModel authModel = new AuthModel();
 
     public SignInListener(StartLoginActivity activity) {
@@ -37,10 +38,12 @@ public class SignInListener implements View.OnClickListener {
         Log.d(TAG, "isUser " + isUser);
         Log.d(TAG, "userEmail " + activity.getEtEmail().getText());
         Log.d(TAG, "userPass " + activity.getEtPassword().getText());
+    }
 
+    public static void onSuccess (int user) {
         Intent intent = null;
 
-        switch (isUser) {
+        switch (user) {
             case IS_USER:
                 activity.getTvLoginHint().setVisibility(TextView.INVISIBLE);
                 intent = new Intent(activity, UnitsActivity.class);
@@ -48,7 +51,7 @@ public class SignInListener implements View.OnClickListener {
                 break;
             case IS_ADMIN:
                 activity.getTvLoginHint().setVisibility(TextView.INVISIBLE);
-                intent = new Intent(activity, UnitsActivity.class);
+                intent = new Intent(activity, AdminActivity.class);
                 activity.startActivity(intent);
                 break;
             case IS_NOT_USER:
