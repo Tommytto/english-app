@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.example.timur.myenglish.R;
 import com.example.timur.myenglish.listeners.AnswerListener;
-import com.example.timur.myenglish.model.SQueryFactory;
 import com.example.timur.myenglish.model.Word;
 
 import java.util.ArrayList;
@@ -89,7 +88,7 @@ public class TaskBtnActivity extends Activity {
                     else
                         taskText.setText(word.getSent2().replace(word.getLang1(), "___"));
                 } else {
-                    taskText.setText(word.getSent1());
+                    taskText.setText(word.getSent1().replace(word.getLang1(), "___"));
                 }
                 taskDescription.setText("Fill words in the gaps");
                 break;

@@ -1,7 +1,5 @@
 package com.example.timur.myenglish.model;
 
-import android.app.Activity;
-import android.nfc.Tag;
 import android.util.Log;
 
 import com.example.timur.myenglish.api.Authorization.Action;
@@ -9,14 +7,6 @@ import com.example.timur.myenglish.api.Authorization.ReqBody;
 import com.example.timur.myenglish.api.Authorization.RespBody;
 import com.example.timur.myenglish.listeners.SignInListener;
 
-import java.io.IOException;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-
-import okhttp3.Interceptor;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -38,7 +28,7 @@ public class AuthModel {
     public AuthModel () {
     }
 
-    public int userAuth (String login, String password) {
+    public void userAuth (String login, String password) {
         ReqBody req = new ReqBody(login, password, "ZhmCGGXeey");
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -56,11 +46,9 @@ public class AuthModel {
                 Log.d(TAG, "hello " + isAuth);
             }
             public void onFailure(Call<RespBody> call, Throwable t) {
-                isAuth = FAIL_REQUEST;
+                SignInListener.onSuccess(FAIL_REQUEST);
             }
         });
-
-        return isAuth;
     };
 
 }

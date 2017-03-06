@@ -34,8 +34,7 @@ public class SignInListener implements View.OnClickListener {
         String userName = activity.getEtEmail().getText().toString();
         String userPass = activity.getEtPassword().getText().toString();
 
-        int isUser = authModel.userAuth(userName, userPass);
-        Log.d(TAG, "isUser " + isUser);
+        authModel.userAuth(userName, userPass);
         Log.d(TAG, "userEmail " + activity.getEtEmail().getText());
         Log.d(TAG, "userPass " + activity.getEtPassword().getText());
     }
