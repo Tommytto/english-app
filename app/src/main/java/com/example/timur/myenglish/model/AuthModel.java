@@ -2,9 +2,9 @@ package com.example.timur.myenglish.model;
 
 import android.util.Log;
 
-import com.example.timur.myenglish.api.Authorization.Action;
-import com.example.timur.myenglish.api.Authorization.ReqBody;
-import com.example.timur.myenglish.api.Authorization.RespBody;
+import com.example.timur.myenglish.api.api.Authorization.Action;
+import com.example.timur.myenglish.api.api.Authorization.ReqBody;
+import com.example.timur.myenglish.api.api.Authorization.RespBody;
 import com.example.timur.myenglish.listeners.SignInListener;
 
 import retrofit2.Call;
@@ -43,7 +43,6 @@ public class AuthModel {
             public void onResponse(Call<RespBody> call, Response<RespBody> response) {
                 isAuth = response.body().getIsUser();
                 SignInListener.onSuccess(isAuth);
-                Log.d(TAG, "hello " + isAuth);
             }
             public void onFailure(Call<RespBody> call, Throwable t) {
                 SignInListener.onSuccess(FAIL_REQUEST);
