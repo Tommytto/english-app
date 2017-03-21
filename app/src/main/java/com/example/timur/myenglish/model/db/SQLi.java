@@ -54,7 +54,9 @@ public class SQLi {
     public ArrayList<Word> getWords(Word word) {
         Cursor cursor = db.rawQuery(
                 "SELECT * from words WHERE num != 0 AND num !=" + word.getNum() +
-                        " AND unit <=" + word.getUnit() + " ORDER BY RANDOM() LIMIT 3;",
+                        " AND unit <=" + word.getUnit() +
+//                        " AND pos = \"" + word.getPos() + "\"" +
+                        " ORDER BY RANDOM() LIMIT 3;",
                 null);
         ArrayList<Word> words = new ArrayList<Word>();
         while (cursor.moveToNext()){

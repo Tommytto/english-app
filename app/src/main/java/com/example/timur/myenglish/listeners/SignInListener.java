@@ -64,6 +64,7 @@ public class SignInListener implements View.OnClickListener {
 
     public static void update(){
         CashLoader.saveString("table_words", Configs.timeNow(), activity);
+        CashLoader.saveString("user", String.valueOf(Info.getUserId()), activity);
 
         SQLi sq = new SQLi(activity);
         sq.deleteAll();
@@ -78,13 +79,15 @@ public class SignInListener implements View.OnClickListener {
     public static void onSuccess () {
 
 //        Проверка-загрузка words
-        if (CashLoader.loadString("table_words", activity) != null) {
+        if (CashLoader.loadString("table_words", activity) != null &&
+                CashLoader.loadString("user", activity) != null) {
 //            Перевод даты(из запроса и из кэша) в int, из второго вычитаем первое, сравниваем с 0
 
             int fromCash = Configs.timeToInt(CashLoader.loadString("table_words", activity));
             int fromResponse = Configs.timeToInt(dateFromRes);
 
-            if (fromCash - fromResponse <= 0) {
+            if (fromCash - fromResponse <= 0
+                    || Integer.parseInt(CashLoader.loadString("user", activity)) != Info.getUserId() ) {
                 update();
                 Log.d(TAG, "1");
             }
