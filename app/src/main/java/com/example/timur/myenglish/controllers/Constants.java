@@ -9,6 +9,7 @@ public class Constants {
     public static final String DB_NAME = "eng_app";
     public static final int DATABASE_VERSION = 1;
     public static final int NOT_IDENTIFIED = -1;
+    public static final int MAXUNIT = 1;
     public class Tasks{
         public static final int TASK_TRANSLATE = 1;
         public static final int TASK_FILL_GAPS = 2;
@@ -32,5 +33,6 @@ public class Constants {
         public static final String FINDPROGRESS = "XoXK3wMkDN";
         public static final String UPDATEPROGRESS = "r0f4g0eR32";
         public static final String FIRSTSIGN = "FQsMsoArQ5";
+        public static final String UPDATEUNIT = "6n0l2HdZch" ;
     }
 }

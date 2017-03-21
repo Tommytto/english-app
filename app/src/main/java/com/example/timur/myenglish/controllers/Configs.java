@@ -21,9 +21,8 @@ import java.util.StringTokenizer;
 
 public class Configs {
     public static void hasProgress(Activity activity){
-        // TODO: 20.03.2017
         FindProgressModel model = new FindProgressModel();
-        model.execute(Info.getUserId(), Info.getCurrentUnit(), activity);
+        model.execute(activity);
     }
 
     public static String timeNow(){

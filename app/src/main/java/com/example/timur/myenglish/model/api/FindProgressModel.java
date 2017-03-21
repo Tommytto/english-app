@@ -2,6 +2,7 @@ package com.example.timur.myenglish.model.api;
 
 import android.app.Activity;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.timur.myenglish.api.api.findProgress.Action;
 import com.example.timur.myenglish.api.api.findProgress.ReqBody;
@@ -26,8 +27,8 @@ import static android.content.ContentValues.TAG;
 
 public class FindProgressModel {
 
-    public void execute (int userid, int unit, final Activity activity) {
-        final ReqBody req = new ReqBody(userid, unit, Constants.Codes.FINDPROGRESS);
+    public void execute (final Activity activity) {
+        final ReqBody req = new ReqBody(Info.getUserId(), Info.getCurrentUnit(), Constants.Codes.FINDPROGRESS, Info.getCurrentWordId());
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://the-people.ru")
@@ -39,9 +40,12 @@ public class FindProgressModel {
         Call<List<Resp>> call = api.findprogress(req);
         call.enqueue(new Callback<List<Resp>>() {
             public void onResponse(Call<List<Resp>> call, Response<List<Resp>> response) {
-//                Log.d(TAG, "onResponse: " + response.body().get(0).getWordid());
                 if (response.body().size() == 0){
-                    Log.d(TAG, "onResponse: Size = 0");
+                    Toast.makeText(activity, "Unit is finished", Toast.LENGTH_LONG);
+                    if (Info.getCurrentUnit() == Info.getUnit() && Info.getUnit() < Constants.MAXUNIT){
+                        Info.setUnit(Info.getCurrentUnit() + 1);
+                        new UpdateUnitModel().execute(activity);
+                    }
                 }
                 else {
                     Info.setCurrentWordId(response.body().get(0).getWordid());

@@ -8,6 +8,7 @@ public class Info {
     private static int unit = -1;
     private static int userId = -1;
     private static int currentUnit = -1;
+    private static int currentWordId = -1;
 
     public static int getCurrentWordId() {
         return currentWordId;
@@ -17,7 +18,7 @@ public class Info {
         Info.currentWordId = currentWordId;
     }
 
-    private static int currentWordId = -1;
+
 
 
     public static int getCurrentUnit() {
