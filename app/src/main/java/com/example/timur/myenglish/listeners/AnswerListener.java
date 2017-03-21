@@ -24,13 +24,20 @@ public class AnswerListener implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        int a = 0;
 
         if (right == current){
             activity.getButtons()[current].setBackgroundColor(Color.GREEN);
+            a = 1;
         }
         else {
             activity.getButtons()[current].setBackgroundColor(Color.RED);
+            a = -3;
         }
+
+        // TODO: 20.03.2017
+//        Update Remote
+
         for (int i = 0; i < 4; i++){
             activity.getButtons()[i].setEnabled(false);
         }
@@ -38,8 +45,6 @@ public class AnswerListener implements View.OnClickListener {
         RelativeLayout layoutWords = (RelativeLayout) activity.findViewById(R.id.layoutWords);
         layoutWords.setOnTouchListener(new TouchListener(activity));
 
-//        Intent intent = new Intent(activity, TaskBtnActivity.class);
-//        activity.startActivity(intent);
     }
 
 }

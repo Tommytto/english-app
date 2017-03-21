@@ -1,16 +1,10 @@
 package com.example.timur.myenglish.listeners;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 
-import com.example.timur.myenglish.controllers.TaskController;
-import com.example.timur.myenglish.view.TaskBtnActivity;
-
-import java.util.Random;
-
-import static android.content.ContentValues.TAG;
+import com.example.timur.myenglish.controllers.Configs;
+import com.example.timur.myenglish.controllers.Info;
 
 /**
  * Created by timur on 25.02.17.
@@ -20,17 +14,18 @@ import static android.content.ContentValues.TAG;
 
 public class UChooseListener implements View.OnClickListener {
     private Activity activity;
+    private int unit;
 
 
-    public UChooseListener(Activity activity) {
+    public UChooseListener(Activity activity, int unit) {
+        this.unit = unit;
         this.activity = activity;
     }
 
     @Override
     public void onClick(View v) {
-
-        //todo по нажатию передать контроллеру id юнита
-        Intent taskIntent = new Intent (activity, TaskController.class);
-        activity.startActivity(taskIntent);
+        Info.setCurrentUnit(unit);
+//        Configs.isFinished(unit, activity);
+        Configs.hasProgress(activity);
     }
 }

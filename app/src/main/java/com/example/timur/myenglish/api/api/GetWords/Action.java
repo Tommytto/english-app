@@ -1,4 +1,6 @@
-package com.example.timur.myenglish.api.api.GetWords;
+package com.example.timur.myenglish.api.api.getWords;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -9,6 +11,6 @@ import retrofit2.http.POST;
  */
 public interface Action {
     @POST("/getwords")
-    Call<RespBody> getWords(@Body ReqBody request);
+    Call<List<Word>> getWords(@Body ReqBody request);
 }
 

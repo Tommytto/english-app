@@ -1,11 +1,10 @@
 package com.example.timur.myenglish.listeners;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.example.timur.myenglish.controllers.TaskController;
+import com.example.timur.myenglish.controllers.Configs;
 
 /**
  * Created by timur on 04.03.17.
@@ -20,8 +19,8 @@ public class TouchListener implements View.OnTouchListener {
     }
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        Intent intent = new Intent(activity, TaskController.class);
-        activity.startActivity(intent);
+//        Configs.isFinished(Info.getCurrentUnit(), activity);
+        Configs.hasProgress(activity);
         return false;
     }
 }

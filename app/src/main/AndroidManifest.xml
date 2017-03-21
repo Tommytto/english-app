@@ -29,10 +29,6 @@
         <activity android:name=".view.AdminActivity">
 
         </activity>
-        <activity android:name=".controllers.TaskController"
-            android:noHistory="true">
-
-        </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

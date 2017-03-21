@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.timur.myenglish.R;
+import com.example.timur.myenglish.controllers.Constants;
 import com.example.timur.myenglish.listeners.AnswerListener;
 import com.example.timur.myenglish.model.Word;
 
@@ -26,10 +27,7 @@ import static android.content.ContentValues.TAG;
  */
 
 public class TaskBtnActivity extends Activity {
-    private static final int NOT_IDENTIFIED = -1;
-    private static final int TASK_TRANSLATE = 1;
-    private static final int TASK_FILL_GAPS = 2;
-    private static final int TASK_MEANING = 3;
+
 
     private Button[] buttons = new Button[4];
 
@@ -43,11 +41,13 @@ public class TaskBtnActivity extends Activity {
         setContentView(R.layout.task1_main);
 
         Intent intentParent = getIntent();
-        int mode = intentParent.getIntExtra("mode", NOT_IDENTIFIED);
+        int mode = intentParent.getIntExtra("mode", Constants.NOT_IDENTIFIED);
 
         //Получаем данные с контроллера
-        ArrayList<Word> words = (ArrayList<Word>) intentParent.getExtras().getSerializable("words");
         Word word = (Word) intentParent.getExtras().getSerializable("word");
+        ArrayList<Word> words = (ArrayList<Word>) intentParent.getExtras().getSerializable("words");
+        Log.d(TAG, "Word: " + word.getLang1());
+        Log.d(TAG, "Wordsize: " + words.size());
         Log.d(TAG, "HERE " + words);
         TextView taskDescription = (TextView) findViewById(R.id.tvTaskDecription);
         TextView taskText = (TextView) findViewById(R.id.tvSentence);
@@ -61,7 +61,7 @@ public class TaskBtnActivity extends Activity {
 
         int right = -1;
         switch (mode) {
-            case TASK_TRANSLATE:
+            case Constants.Tasks.TASK_TRANSLATE:
                 for (int i = 0; i < 4; i++){
                     buttons[i].setText(words.get(i).getLang2());
                     if (words.get(i).equals(word)) {
@@ -73,7 +73,7 @@ public class TaskBtnActivity extends Activity {
                 taskText.setText(word.getLang1());
                 break;
 
-            case TASK_FILL_GAPS:
+            case Constants.Tasks.TASK_FILL_GAPS:
                 for (int i = 0; i < 4; i++){
                     buttons[i].setText(words.get(i).getLang1());
                     if (words.get(i).equals(word)) {
@@ -93,7 +93,7 @@ public class TaskBtnActivity extends Activity {
                 taskDescription.setText("Fill words in the gaps");
                 break;
 
-            case TASK_MEANING:
+            case Constants.Tasks.TASK_MEANING:
                 for (int i = 0; i < 4; i++){
                     buttons[i].setText(words.get(i).getLang1());
                     if (words.get(i).equals(word))

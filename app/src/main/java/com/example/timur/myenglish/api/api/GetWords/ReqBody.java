@@ -1,4 +1,4 @@
-package com.example.timur.myenglish.api.api.GetWords;
+package com.example.timur.myenglish.api.api.getWords;
 
 /**
  * Created by Alex on 07.03.2017.

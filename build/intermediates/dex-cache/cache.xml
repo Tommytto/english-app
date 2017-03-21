@@ -3,192 +3,192 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Alex\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.1.0_5dee072fcd9ab98392100e318435260b6bfbccbb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.3.0_540313a18d019259b7f65b7ea3861278ca037b5c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.1.1_93d2fcd5fffe4384127c3c597312b20cd5807b47\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.1_929d5fa8630fc5f0896d824af2a83d5df422bfc4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.1_229447f58e37f4b6c62b2cef28e7de00cda4ae22\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.1_2d13902d51fb936e92e9057610583b8b8ba8e004\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.1.1_b63a56bdc23d2c5b6852a834578396da48f97f2b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.1_354eacc8c302648eb1191c850fde6b2dd27a0b5d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.1.1_f8421e0798ed603c5a6bb274c54c54eaa3c6bdec\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.1.1_bb2fed57c4137c117b8457ae722fbea17cf8ea92\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.1_63e7ab4c82a2322bf94f64c3b48fbb3853ebdd35\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.1.1_6f25a34d7e16c01d00edeac65a5ca87658d68ad1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.4.0\40340c0748190fe897baf7bffbc1b282734294e5\okhttp-2.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-2.4.0_089d415d148ee631a11564945e52d93284e0c978\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.1.1_9b2b3d6e638ee84d2d54c8757e7443db30dc16cc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.1.0_7633bbe249fc4506896980b5d60a7e7ff2cd681b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_6e1d856ec72c6e6a447dfbecde8c43589c8da8e6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="24a940b9fd7d869e9d7bc118f4323039c6a62079">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_08ad4b5b8981f17f0c37aa20d11ec54935452e8e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.1_624aa815ef1b45e498f8a1a3410b8d7e6dfb10bc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.1_da9e4eab46bf7d8673ce846beabcb09636f9598c\classes.dex" />
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.1_a97af1d6daa0f8083c4f7526ba13925a0a7f2dc7\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Alex\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="900bc0c76121ccc14c4895bf81dae3a61f2bab8b">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9bdbc0a20252239d0800858818fc6eec96e1c2a6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_45c3c52c0557ab3f7cb41403b859edc57108eb1c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.8.0_bc6a6e32bb5c9cf29705189d2e77407cac05a441\classes.dex" />
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.8.0_c8629b90db5984ee099a82a9293993c889b81456\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\slava\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="8f00e805aeb032bb60ea655b5ad8a80c1e724fca">
-        <dex dex="C:\Users\Alex\Desktop\Project\english-app1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_72cb69dc2446de6ba47f85fdf0b87fee92e7014a\classes.dex" />
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.1.0_71a3774b64c64a280149f483a42e9739b9d41da5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.1.0_9eff1c5753d064e1f68844a0a28952b7723aa862\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.1.1_5dbc96d7ef80d1669310ce477097c0d23a21da2f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.4.0\40340c0748190fe897baf7bffbc1b282734294e5\okhttp-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-2.4.0_da982f773993086f59d7509197d5c7617c69533c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.1.1_eb6fe8d863d39a5626a371ff798e41d9558152fd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.1.1_d80b9e0e837fe4e70da9048d59d4046cbbfe1679\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.1_d89de5094c16779732858e3b99f5b3f03597c299\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.1_67dd8411c025f5081241a2f280d4fe871d99c773\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.3.0_8bab2895d37c6e6a3aa64597a517016290aaeeeb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.1.1_7854de5e7d3561cf3f3da8157189010a1b80d951\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.1_8c68b5d0ed4f6c6da88fe6933993dce5935daae3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.1_d0753458c41990ab193945eb88ecf78c7bf1fcce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.1.1_edc4b60e8e41dbb592dff3046aee67fb1074e420\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.1_09a6be4273ceddfbc25ad18f6f1b67bd56307a7c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.1_f1df492487b404230b779bcabcc881541331ffae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.1.1_d1ec3e46a1c316fca8ebf2958713bdb77bf1b9a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5e8bfc04d916062828f54d10a0b1552fcc7a35e9">
+        <dex dex="C:\Users\slava\AndroidStudioProjects\english-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_88970dd9665af6dd6d761ca25066467e76ad00a1\classes.dex" />
     </item>
 
 </items>

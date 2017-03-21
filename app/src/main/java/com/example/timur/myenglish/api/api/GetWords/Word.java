@@ -1,4 +1,4 @@
-package com.example.timur.myenglish.api.api.GetWords;
+package com.example.timur.myenglish.api.api.getWords;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -7,11 +7,11 @@ import com.google.gson.annotations.SerializedName;
  * Created by Alex on 07.03.2017.
  */
 
-public class RespBody {
+public class Word {
 
     @SerializedName("num")
     @Expose
-    private String num;
+    private Integer num;
     @SerializedName("lang1")
     @Expose
     private String lang1;
@@ -26,10 +26,10 @@ public class RespBody {
     private String def2;
     @SerializedName("synid")
     @Expose
-    private String synid;
+    private Integer synid;
     @SerializedName("oppid")
     @Expose
-    private String oppid;
+    private Integer oppid;
     @SerializedName("pos")
     @Expose
     private String pos;
@@ -41,13 +41,13 @@ public class RespBody {
     private String sent2;
     @SerializedName("unit")
     @Expose
-    private String unit;
+    private Integer unit;
 
-    public String getNum() {
+    public Integer getNum() {
         return num;
     }
 
-    public void setNum(String num) {
+    public void setNum(Integer num) {
         this.num = num;
     }
 
@@ -83,19 +83,19 @@ public class RespBody {
         this.def2 = def2;
     }
 
-    public String getSynid() {
+    public Integer getSynid() {
         return synid;
     }
 
-    public void setSynid(String synid) {
+    public void setSynid(Integer synid) {
         this.synid = synid;
     }
 
-    public String getOppid() {
+    public Integer getOppid() {
         return oppid;
     }
 
-    public void setOppid(String oppid) {
+    public void setOppid(Integer oppid) {
         this.oppid = oppid;
     }
 
@@ -123,11 +123,11 @@ public class RespBody {
         this.sent2 = sent2;
     }
 
-    public String getUnit() {
+    public Integer getUnit() {
         return unit;
     }
 
-    public void setUnit(String unit) {
+    public void setUnit(Integer unit) {
         this.unit = unit;
     }
 }

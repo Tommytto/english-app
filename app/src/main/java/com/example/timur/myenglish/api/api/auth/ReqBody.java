@@ -1,4 +1,4 @@
-package com.example.timur.myenglish.api.api.Authorization;
+package com.example.timur.myenglish.api.api.auth;
 
 public class ReqBody {
     private String login;

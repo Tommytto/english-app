@@ -1,4 +1,4 @@
-package com.example.timur.myenglish.api.api.Authorization;
+package com.example.timur.myenglish.api.api.addProgress;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -9,7 +9,7 @@ import retrofit2.http.POST;
  */
 
 public interface Action {
-    @POST("/auth")
-    Call<RespBody> register(@Body ReqBody request);
+    @POST("/addprogress")
+    Call<Resp> addprogress(@Body ReqBody request);
 }
 

@@ -1,9 +1,9 @@
-package com.example.timur.myenglish.api.api.Authorization;
+package com.example.timur.myenglish.api.api.auth;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class RespBody {
+public class Auth {
 
     @SerializedName("isUser")
     @Expose
@@ -12,6 +12,10 @@ public class RespBody {
     @SerializedName("id")
     @Expose
     private Integer id;
+
+    @SerializedName("unit")
+    @Expose
+    private Integer unit;
 
     public Integer getIsUser() {
         return isUser;
@@ -27,5 +31,13 @@ public class RespBody {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getUnit() {
+        return unit;
+    }
+
+    public void setUnit(Integer unit) {
+        this.unit = unit;
     }
 }
