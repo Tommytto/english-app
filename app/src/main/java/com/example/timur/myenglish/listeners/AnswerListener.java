@@ -1,10 +1,8 @@
 package com.example.timur.myenglish.listeners;
 
-import android.graphics.Color;
 import android.view.View;
-import android.widget.RelativeLayout;
 
-import com.example.timur.myenglish.R;
+import com.example.timur.myenglish.model.api.AddProgressModel;
 import com.example.timur.myenglish.view.TaskBtnActivity;
 
 /**
@@ -27,23 +25,24 @@ public class AnswerListener implements View.OnClickListener {
         int a = 0;
 
         if (right == current){
-            activity.getButtons()[current].setBackgroundColor(Color.GREEN);
+//            activity.getButtons()[current].setBackgroundColor(Color.GREEN);
             a = 1;
         }
         else {
-            activity.getButtons()[current].setBackgroundColor(Color.RED);
+//            activity.getButtons()[current].setBackgroundColor(Color.RED);
             a = -3;
         }
 
-        // TODO: 20.03.2017
+      // TODO: 20.03.2017
 //        Update Remote
+        new AddProgressModel().execute(a, current, activity);
 
-        for (int i = 0; i < 4; i++){
-            activity.getButtons()[i].setEnabled(false);
-        }
-
-        RelativeLayout layoutWords = (RelativeLayout) activity.findViewById(R.id.layoutWords);
-        layoutWords.setOnTouchListener(new TouchListener(activity));
+//        for (int i = 0; i < 4; i++){
+//            activity.getButtons()[i].setEnabled(false);
+//        }
+//
+//        RelativeLayout layoutWords = (RelativeLayout) activity.findViewById(R.id.layoutWords);
+//        layoutWords.setOnTouchListener(new TouchListener(activity));
 
     }
 
