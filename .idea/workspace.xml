@@ -14,19 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07ca8aa5-d74e-497c-8530-f27292b40b2e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/listeners/SignInListener.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/listeners/SignInListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/view/StartLoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/view/StartLoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/task1_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/task1_main.xml" />
     </list>
     <ignored path="english-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +50,8 @@
       <file leaf-file-name="SQLi.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/model/db/SQLi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+            <state relative-caret-position="527">
+              <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
               <folding>
                 <element signature="docComment;class#SQLi#0" expanded="false" />
                 <element signature="method#SQLi#0;class#SQLi#0" expanded="false" />
@@ -1944,11 +1932,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/listeners/AnswerListener.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/api/api/addProgress/Action.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/model/api/AddProgressModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/model/db/SQLi.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/units_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/task1_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/listeners/SignInListener.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/view/StartLoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/model/db/SQLi.java" />
       </list>
     </option>
   </component>
@@ -2615,7 +2603,21 @@
       <option name="project" value="LOCAL" />
       <updated>1490111276819</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="+same &quot;pos&quot; of words">
+      <created>1490508934973</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1490508934973</updated>
+    </task>
+    <task id="LOCAL-00015" summary="+same &quot;pos&quot; of words">
+      <created>1490509061309</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1490509061309</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2941,6 +2943,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="58" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3081,8 +3084,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/timur/myenglish/model/db/SQLi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        <state relative-caret-position="527">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
           <folding>
             <element signature="docComment;class#SQLi#0" expanded="false" />
             <element signature="method#SQLi#0;class#SQLi#0" expanded="false" />
