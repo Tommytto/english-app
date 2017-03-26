@@ -67,6 +67,7 @@ public class TaskBtnActivity extends Activity {
                     if (words.get(i).equals(word)) {
                         right = i;
                     }
+                    Log.d(TAG, "Current btn " + i);
                     buttons[i].setOnClickListener(new AnswerListener(right, i, this));
                 }
                 taskDescription.setText("Choose right translate");

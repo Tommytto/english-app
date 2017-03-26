@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.timur.myenglish.R;
@@ -23,11 +24,9 @@ public class StartLoginActivity extends Activity {
     public TextView getTvLoginHint() {
         return tvLoginHint;
     }
-
     public EditText getEtPassword() {
         return etPassword;
     }
-
     public EditText getEtEmail() {
         return etEmail;
     }
@@ -42,7 +41,6 @@ public class StartLoginActivity extends Activity {
 
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
-
         tvLoginHint = (TextView) findViewById(R.id.tvLoginHint);
 
         etPassword.setTypeface(Typeface.DEFAULT);

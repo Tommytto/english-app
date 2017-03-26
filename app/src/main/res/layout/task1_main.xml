@@ -79,7 +79,8 @@
         android:indeterminate="true"
         android:layout_below="@+id/tvSentence"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp" />
+        android:layout_marginTop="13dp"
+        android:visibility="invisible"/>
 
     <ProgressBar
         android:id="@+id/task_progress_bar"

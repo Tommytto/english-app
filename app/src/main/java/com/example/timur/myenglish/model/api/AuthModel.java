@@ -22,10 +22,10 @@ import static com.example.timur.myenglish.controllers.Constants.UserTypes.FAIL_R
 public class AuthModel {
     private Auth auth;
 
-    public AuthModel () {
+    public AuthModel() {
     }
 
-    public Auth userAuth (String login, String password) {
+    public Auth userAuth(String login, String password) {
         ReqBody req = new ReqBody(login, password, Constants.Codes.AUTH);
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -43,13 +43,15 @@ public class AuthModel {
                 Info.setUserId(auth.getId());
                 SignInListener.setIsUser(auth.getIsUser());
 
-                    if (auth.getIsUser() == Constants.UserTypes.IS_USER) {
-                        GetDateModel getDateModel = new GetDateModel();
-                        getDateModel.getdate();
-                    }
-                    else SignInListener.choose();
+                if (auth.getIsUser() == Constants.UserTypes.IS_USER) {
+                    GetDateModel getDateModel = new GetDateModel();
+                    getDateModel.getdate();
+                } else {
+                    SignInListener.choose();
+                }
 
             }
+
             public void onFailure(Call<Auth> call, Throwable t) {
                 SignInListener.setIsUser(FAIL_REQUEST);
                 SignInListener.choose();

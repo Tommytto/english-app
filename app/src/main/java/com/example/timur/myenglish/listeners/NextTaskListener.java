@@ -13,13 +13,16 @@ import com.example.timur.myenglish.controllers.Configs;
 public class NextTaskListener implements View.OnTouchListener {
 
     private Activity activity;
+    private View view;
 
-    public NextTaskListener(Activity activity) {
+    public NextTaskListener( View view, Activity activity) {
         this.activity = activity;
+        this.view = view;
     }
     @Override
     public boolean onTouch(View v, MotionEvent event) {
 //        Configs.isFinished(Info.getCurrentUnit(), activity);
+        view.setOnClickListener(null);
         Configs.hasProgress(activity);
         return false;
     }

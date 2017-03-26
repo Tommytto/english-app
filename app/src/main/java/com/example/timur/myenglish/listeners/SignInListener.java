@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.timur.myenglish.R;
 import com.example.timur.myenglish.api.api.auth.Auth;
 import com.example.timur.myenglish.controllers.Configs;
 import com.example.timur.myenglish.controllers.Constants;
@@ -51,7 +53,9 @@ public class SignInListener implements View.OnClickListener {
 
         String userName = activity.getEtEmail().getText().toString();
         String userPass = activity.getEtPassword().getText().toString();
+        ProgressBar login_preloader = (ProgressBar) activity.findViewById(R.id.login_preloader);
 
+        login_preloader.setVisibility(View.VISIBLE);
         Auth auth = authModel.userAuth(userName, userPass);
 
 
@@ -104,6 +108,8 @@ public class SignInListener implements View.OnClickListener {
 
     public static void choose(){
         Intent intent;
+        ProgressBar login_preloader = (ProgressBar) activity.findViewById(R.id.login_preloader);
+        login_preloader.setVisibility(View.INVISIBLE);
         switch (isUser) {
             case Constants.UserTypes.IS_USER:
                 activity.getTvLoginHint().setVisibility(TextView.INVISIBLE);
