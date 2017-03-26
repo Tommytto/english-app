@@ -27,19 +27,6 @@
         android:layout_alignLeft="@+id/tvSentence"
         android:layout_alignStart="@+id/tvSentence" />
 
-    <TextView
-        android:text="TextView"
-        android:textAlignment="center"
-        android:layout_width="300dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
-        android:id="@+id/tvTaskDecription"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:text="Button1"
         android:layout_width="140dp"
@@ -70,4 +57,41 @@
         android:layout_alignTop="@+id/btnChoose1"
         android:layout_alignRight="@+id/btnChoose4"
         android:layout_alignEnd="@+id/btnChoose4" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="40dp"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="TextView"
+        android:textAlignment="center"
+        android:layout_width="300dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTaskDecription"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/tvSentence"
+        android:layout_alignStart="@+id/tvSentence"
+        android:layout_marginTop="42dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_alignLeft="@+id/tvTaskDecription"
+        android:layout_alignStart="@+id/tvTaskDecription"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="37dp"
+        android:id="@+id/editText" />
 </RelativeLayout>
