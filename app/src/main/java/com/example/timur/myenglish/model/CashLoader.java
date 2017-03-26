@@ -31,6 +31,25 @@ public class CashLoader extends Activity {
         }
         return value;
     }
+
+    //метод записи в кэш Stringового файла
+    public static void addToDailyLimit(String key, Activity activity){
+        sharedPreferences = activity.getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        int currentValue = loadDailyLimit(key, activity) + 1;
+        editor.putInt(key, currentValue);
+        editor.apply();
+    }
+
+    //метод загрузки из кэша Stringового файла
+    public static int loadDailyLimit(String key, Activity activity){
+        sharedPreferences = activity.getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE);
+        int value = 0;
+        if (sharedPreferences.contains(key)){
+            value = sharedPreferences.getInt(key,0);
+        }
+        return value;
+    }
 }
 
 

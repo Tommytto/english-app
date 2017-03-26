@@ -10,11 +10,11 @@ import com.example.timur.myenglish.controllers.Configs;
  * Created by timur on 04.03.17.
  */
 
-public class TouchListener implements View.OnTouchListener {
+public class NextTaskListener implements View.OnTouchListener {
 
     private Activity activity;
 
-    public TouchListener(Activity activity) {
+    public NextTaskListener(Activity activity) {
         this.activity = activity;
     }
     @Override

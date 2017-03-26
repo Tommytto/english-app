@@ -1,16 +1,13 @@
 package com.example.timur.myenglish.model.api;
 
-import android.graphics.Color;
 import android.util.Log;
-import android.widget.RelativeLayout;
 
-import com.example.timur.myenglish.R;
 import com.example.timur.myenglish.api.api.addProgress.Action;
 import com.example.timur.myenglish.api.api.addProgress.ReqBody;
 import com.example.timur.myenglish.api.api.addProgress.Resp;
 import com.example.timur.myenglish.controllers.Constants;
 import com.example.timur.myenglish.controllers.Info;
-import com.example.timur.myenglish.listeners.TouchListener;
+import com.example.timur.myenglish.listeners.AnswerListener;
 import com.example.timur.myenglish.view.TaskBtnActivity;
 
 import retrofit2.Call;
@@ -39,19 +36,7 @@ public class AddProgressModel {
         Call<Resp> call = api.addprogress(req);
         call.enqueue(new Callback<Resp>() {
             public void onResponse(Call<Resp> call, Response<Resp> response) {
-                if (points == 1){
-                    activity.getButtons()[current].setBackgroundColor(Color.GREEN);
-                }
-                else {
-                    activity.getButtons()[current].setBackgroundColor(Color.RED);
-                }
-                for (int i = 0; i < 4; i++){
-                    activity.getButtons()[i].setEnabled(false);
-                }
-
-                RelativeLayout layoutWords = (RelativeLayout) activity.findViewById(R.id.layoutWords);
-                layoutWords.setOnTouchListener(new TouchListener(activity));
-
+                AnswerListener.addNextTaskListener();
             }
             public void onFailure(Call<Resp> call, Throwable t) {
                 Log.d(TAG, "onFailure: UNSUCCESSFULLY:(");

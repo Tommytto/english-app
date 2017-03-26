@@ -70,4 +70,24 @@
         android:layout_alignTop="@+id/btnChoose1"
         android:layout_alignRight="@+id/btnChoose4"
         android:layout_alignEnd="@+id/btnChoose4" />
+
+    <ProgressBar
+        android:id="@+id/progress_preloader"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_below="@+id/tvSentence"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+
+    <ProgressBar
+        android:id="@+id/task_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
