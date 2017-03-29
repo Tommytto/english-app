@@ -1,7 +1,5 @@
 package com.example.timur.myenglish.listeners;
 
-import android.graphics.Color;
-import android.nfc.Tag;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -20,16 +18,16 @@ import static com.example.timur.myenglish.model.CashLoader.loadDailyLimit;
  */
 
 public class AnswerListener implements View.OnClickListener {
-    private static int right;
-    private static int current;
+    private int right;
+    private int current;
     private static TaskBtnActivity activity;
 
     public AnswerListener(int right, int current, TaskBtnActivity activity) {
         this.right = right;
         this.current = current;
         this.activity = activity;
-        Log.d(TAG, "Current btn click " + current);
-        Log.d(TAG, "Current btn click right " + right);
+//        Log.d(TAG, "Current btn click " + current);
+//        Log.d(TAG, "Current btn click right " + right);
     }
 
     @Override
@@ -41,14 +39,6 @@ public class AnswerListener implements View.OnClickListener {
         progress_preloader.setVisibility(View.VISIBLE);
         for (int i = 0; i < 4; i++) {
             activity.getButtons()[i].setEnabled(false);
-        }
-
-        if (right == current) {
-            activity.getButtons()[current].setBackgroundColor(Color.GREEN);
-
-        } else {
-            activity.getButtons()[current].setBackgroundColor(Color.RED);
-
         }
         if (right == current) {
             points = 1;
