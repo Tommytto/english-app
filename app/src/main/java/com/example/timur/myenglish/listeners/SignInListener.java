@@ -19,8 +19,13 @@ import com.example.timur.myenglish.model.db.SQLi;
 import com.example.timur.myenglish.view.AdminActivity;
 import com.example.timur.myenglish.view.StartLoginActivity;
 import com.example.timur.myenglish.view.UnitsActivity;
+import com.example.timur.myenglish.model.CashLoader;
+
 
 import static android.content.ContentValues.TAG;
+import static com.example.timur.myenglish.model.CashLoader.addToDailyLimit;
+import static com.example.timur.myenglish.model.CashLoader.loadString;
+import static com.example.timur.myenglish.model.CashLoader.saveString;
 
 /**
  * Created by timur on 25.02.17.
@@ -55,20 +60,23 @@ public class SignInListener implements View.OnClickListener {
         String userPass = activity.getEtPassword().getText().toString();
         ProgressBar login_preloader = (ProgressBar) activity.findViewById(R.id.login_preloader);
 
-        login_preloader.setVisibility(View.VISIBLE);
-        Auth auth = authModel.userAuth(userName, userPass);
+        if (CashLoader.checkAuthToken("authToken", activity)) {
 
+        } else {
+            login_preloader.setVisibility(View.VISIBLE);
+            Auth auth = authModel.userAuth(userName, userPass);
 
-        if (auth != null) {
-            Log.d(TAG, "Id " + auth.getId());
-            Log.d(TAG, "IsUser " + auth.getIsUser());
-            Log.d(TAG, "Unit " + auth.getUnit());
+            if (auth != null) {
+                Log.d(TAG, "Id " + auth.getId());
+                Log.d(TAG, "IsUser " + auth.getIsUser());
+                Log.d(TAG, "Unit " + auth.getUnit());
+            }
         }
     }
 
-    public static void update(){
-        CashLoader.saveString("table_words", Configs.timeNow(), activity);
-        CashLoader.saveString("user", String.valueOf(Info.getUserId()), activity);
+    public static void update() {
+        saveString("table_words", Configs.timeNow(), activity);
+        saveString("user", String.valueOf(Info.getUserId()), activity);
 
         SQLi sq = new SQLi(activity);
         sq.deleteAll();
@@ -80,22 +88,21 @@ public class SignInListener implements View.OnClickListener {
 //        model.getWords();
     }
 
-    public static void onSuccess () {
+    public static void onSuccess() {
 
 //        Проверка-загрузка words
-        if (CashLoader.loadString("table_words", activity) != null &&
-                CashLoader.loadString("user", activity) != null) {
+        if (loadString("table_words", activity) != null &&
+                loadString("user", activity) != null) {
 //            Перевод даты(из запроса и из кэша) в int, из второго вычитаем первое, сравниваем с 0
 
-            int fromCash = Configs.timeToInt(CashLoader.loadString("table_words", activity));
+            int fromCash = Configs.timeToInt(loadString("table_words", activity));
             int fromResponse = Configs.timeToInt(dateFromRes);
 
             if (fromCash - fromResponse <= 0
-                    || Integer.parseInt(CashLoader.loadString("user", activity)) != Info.getUserId() ) {
+                    || Integer.parseInt(loadString("user", activity)) != Info.getUserId()) {
                 update();
                 Log.d(TAG, "1");
-            }
-            else {
+            } else {
                 SignInListener.choose();
             }
             Log.d(TAG, "2");
@@ -106,10 +113,15 @@ public class SignInListener implements View.OnClickListener {
         }
     }
 
-    public static void choose(){
+    public static void choose() {
         Intent intent;
         ProgressBar login_preloader = (ProgressBar) activity.findViewById(R.id.login_preloader);
         login_preloader.setVisibility(View.INVISIBLE);
+
+        saveString("hello", "imher", activity);
+        Log.d(TAG,"yeah " + loadString("hello", activity));
+        addToDailyLimit("dailyLim", activity);
+
         switch (isUser) {
             case Constants.UserTypes.IS_USER:
                 activity.getTvLoginHint().setVisibility(TextView.INVISIBLE);

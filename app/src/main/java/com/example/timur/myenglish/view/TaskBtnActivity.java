@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.timur.myenglish.R;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import static android.content.ContentValues.TAG;
+import static com.example.timur.myenglish.model.CashLoader.loadDailyLimit;
 
 /**
  * Created by timur on 18.02.17.
@@ -39,6 +41,10 @@ public class TaskBtnActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.task1_main);
+
+        int tasksPerDay = loadDailyLimit("dailyLimit", this);
+        ProgressBar task_progress_bar = (ProgressBar) findViewById(R.id.task_progress_bar);
+        task_progress_bar.incrementProgressBy(10 * tasksPerDay);
 
         Intent intentParent = getIntent();
         int mode = intentParent.getIntExtra("mode", Constants.NOT_IDENTIFIED);

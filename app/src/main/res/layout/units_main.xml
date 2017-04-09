@@ -1,34 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:text="Your units"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="30dp"
-        android:layout_marginTop="27dp"
-        android:id="@+id/textView2" />
-
-    <TextView
-        android:text="Unit 1"
-        android:layout_gravity="start"
-        android:textAlignment="viewStart"
-        android:paddingTop="13dp"
-        android:paddingLeft="30dp"
-        android:textColor="#fff"
-        android:textStyle="bold"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_height="50dp"
-        android:textSize="20dp"
-        android:background="#009999"
-        android:id="@+id/tvUnit"
-        android:layout_marginTop="26dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-</RelativeLayout>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="84dp"
+            android:text="Your units"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/tvUnit"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="start"
+            android:layout_marginTop="43dp"
+            android:background="#009999"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="13dp"
+            android:text="Unit 1"
+            android:textAlignment="viewStart"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="17dp"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
+            android:background="#009999"
+            android:text="Logout"
+            android:textAlignment="center"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

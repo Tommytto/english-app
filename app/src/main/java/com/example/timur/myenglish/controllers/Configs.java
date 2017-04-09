@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.timur.myenglish.model.Word;
 import com.example.timur.myenglish.model.api.FindProgressModel;
@@ -14,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Random;
 import java.util.StringTokenizer;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by slava on 19.03.2017.

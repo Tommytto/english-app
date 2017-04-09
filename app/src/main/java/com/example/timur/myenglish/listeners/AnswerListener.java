@@ -12,6 +12,7 @@ import com.example.timur.myenglish.view.TaskBtnActivity;
 import static android.content.ContentValues.TAG;
 import static com.example.timur.myenglish.model.CashLoader.addToDailyLimit;
 import static com.example.timur.myenglish.model.CashLoader.loadDailyLimit;
+import static com.example.timur.myenglish.model.CashLoader.putLastTaskTime;
 
 /**
  * Created by slava on 28.02.2017.
@@ -69,12 +70,12 @@ public class AnswerListener implements View.OnClickListener {
         progress_preloader.setVisibility(View.INVISIBLE);
 
         addToDailyLimit("dailyLimit", activity);
-
-
-        if (tasksPerDay == 10) {
+        Log.d(TAG, "tasksPerDay " + tasksPerDay);
+        if (tasksPerDay >= 9) {
+            putLastTaskTime("lastTaskTime", activity);
             layoutWords.setOnClickListener(new ToUnitsListener(activity));
         } else {
-            layoutWords.setOnTouchListener(new NextTaskListener(layoutWords,activity));
+            layoutWords.setOnClickListener(new NextTaskListener(layoutWords,activity));
         }
     }
 }
