@@ -42,7 +42,7 @@ public class TaskBtnActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.task1_main);
 
-        int tasksPerDay = loadDailyLimit("dailyLimit", this);
+        int tasksPerDay = loadDailyLimit(Constants.Cash.TASKS_DAILY_LIMIT_CASH, this);
         ProgressBar task_progress_bar = (ProgressBar) findViewById(R.id.task_progress_bar);
         task_progress_bar.incrementProgressBy(10 * tasksPerDay);
 

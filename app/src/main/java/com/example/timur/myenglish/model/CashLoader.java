@@ -38,6 +38,29 @@ public class CashLoader extends Activity {
         return value;
     }
 
+    public static void saveInt(String key, int data, Activity activity) {
+        sharedPreferences = activity.getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(key, data);
+        editor.apply();
+    }
+
+    public static int loadInt(String key, Activity activity) {
+        sharedPreferences = activity.getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE);
+        int value = 0;
+        if (sharedPreferences.contains(key)){
+            value = sharedPreferences.getInt(key, 0);
+        }
+        return value;
+    }
+
+    public static void removeFromCash(String key, Activity activity) {
+        sharedPreferences = activity.getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove(key);
+        editor.apply();
+    }
+
     // Инкремент количества пройденных заданий в день
     public static void addToDailyLimit(String key, Activity activity){
         sharedPreferences = activity.getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE);
@@ -45,9 +68,6 @@ public class CashLoader extends Activity {
         int currentValue = loadDailyLimit(key,activity) + 1;
         editor.putInt(key, currentValue);
         editor.apply();
-
-        Log.d(TAG, "cash add " + sharedPreferences.getInt(key,0));
-        Log.d(TAG, "cash add to " + loadDailyLimit(key,activity));
     }
 
     // Получений пройденных задание за сегодня
@@ -56,7 +76,6 @@ public class CashLoader extends Activity {
         int value;
         if (sharedPreferences.contains(key)){
             value = sharedPreferences.getInt(key,0);
-            Log.d(TAG, "cash load " + sharedPreferences.getInt(key,0));
         } else {
             value = 0;
         }
@@ -66,16 +85,14 @@ public class CashLoader extends Activity {
     // Проверка на пройденные сутки и сброс счетчика пройденных заданий
     public static void isEndedDailyLimit(String key, long currentTime, Activity activity){
         Calendar calendar = Calendar.getInstance();
-        long lastTaskTime = getLastTaskTime("lastTaskTime", activity);
+        long lastTaskTime = getLastTaskTime(Constants.Cash.LAST_TASK_TIME_CASH, activity);
 //        long millisPerDay = 864 * 10^5;
         long millisPerDay = 20000;
-        Log.d(TAG, "inTIme " + (currentTime - lastTaskTime));
         if (sharedPreferences.getInt(key,0) >= 9 && (currentTime - lastTaskTime) >= millisPerDay) {
             sharedPreferences = activity.getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt(key, 0);
             editor.apply();
-            Log.d(TAG, "inTIme " + (currentTime - lastTaskTime));
         }
     }
 
@@ -85,14 +102,6 @@ public class CashLoader extends Activity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         boolean isAuth = true;
         editor.putBoolean(key, isAuth);
-        editor.apply();
-    }
-
-    // Убираем токен из кэша
-    public static void removeAuthToken (String key, Activity activity) {
-        sharedPreferences = activity.getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove(key);
         editor.apply();
     }
 

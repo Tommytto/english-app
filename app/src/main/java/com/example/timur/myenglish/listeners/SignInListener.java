@@ -34,7 +34,7 @@ import static com.example.timur.myenglish.model.CashLoader.saveString;
 public class SignInListener implements View.OnClickListener {
 
     private static StartLoginActivity activity;
-    private AuthModel authModel = new AuthModel();
+    private AuthModel authModel;
     private static int isUser;
     private static String dateFromRes;
 
@@ -51,7 +51,8 @@ public class SignInListener implements View.OnClickListener {
     }
 
     public SignInListener(StartLoginActivity activity) {
-        SignInListener.activity = activity;
+        this.activity = activity;
+        this.authModel = new AuthModel(activity);
     }
 
     public void onClick(View v) {
@@ -60,18 +61,15 @@ public class SignInListener implements View.OnClickListener {
         String userPass = activity.getEtPassword().getText().toString();
         ProgressBar login_preloader = (ProgressBar) activity.findViewById(R.id.login_preloader);
 
-        if (CashLoader.checkAuthToken("authToken", activity)) {
+        login_preloader.setVisibility(View.VISIBLE);
+        Auth auth = authModel.userAuth(userName, userPass);
 
-        } else {
-            login_preloader.setVisibility(View.VISIBLE);
-            Auth auth = authModel.userAuth(userName, userPass);
-
-            if (auth != null) {
-                Log.d(TAG, "Id " + auth.getId());
-                Log.d(TAG, "IsUser " + auth.getIsUser());
-                Log.d(TAG, "Unit " + auth.getUnit());
-            }
+        if (auth != null) {
+            Log.d(TAG, "Id " + auth.getId());
+            Log.d(TAG, "IsUser " + auth.getIsUser());
+            Log.d(TAG, "Unit " + auth.getUnit());
         }
+
     }
 
     public static void update() {
@@ -90,6 +88,8 @@ public class SignInListener implements View.OnClickListener {
 
     public static void onSuccess() {
 
+        Info.setUnit(CashLoader.loadInt(Constants.Cash.UNIT_ID_CASH, activity));
+        Info.setUserId(CashLoader.loadInt(Constants.Cash.USER_ID_CASH, activity));
 //        Проверка-загрузка words
         if (loadString("table_words", activity) != null &&
                 loadString("user", activity) != null) {
@@ -117,10 +117,6 @@ public class SignInListener implements View.OnClickListener {
         Intent intent;
         ProgressBar login_preloader = (ProgressBar) activity.findViewById(R.id.login_preloader);
         login_preloader.setVisibility(View.INVISIBLE);
-
-        saveString("hello", "imher", activity);
-        Log.d(TAG,"yeah " + loadString("hello", activity));
-        addToDailyLimit("dailyLim", activity);
 
         switch (isUser) {
             case Constants.UserTypes.IS_USER:

@@ -44,8 +44,7 @@ public class GetDateModel {
                 date = response.body().get(0);
                 Log.d(null, "HERE IS GETDATE API" + ((date == null)));
                 SignInListener.setDateFromRes(date.getDate());
-                    SignInListener.onSuccess();
-
+                SignInListener.onSuccess();
             }
             public void onFailure(Call<List<Date>> call, Throwable t) {
                 SignInListener.setIsUser(FAIL_REQUEST);

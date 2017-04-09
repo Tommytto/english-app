@@ -6,6 +6,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import com.example.timur.myenglish.R;
+import com.example.timur.myenglish.controllers.Constants;
 import com.example.timur.myenglish.model.api.AddProgressModel;
 import com.example.timur.myenglish.view.TaskBtnActivity;
 
@@ -27,17 +28,14 @@ public class AnswerListener implements View.OnClickListener {
         this.right = right;
         this.current = current;
         this.activity = activity;
-//        Log.d(TAG, "Current btn click " + current);
-//        Log.d(TAG, "Current btn click right " + right);
     }
 
     @Override
     public void onClick(View v) {
-        Log.d(TAG, "Current btn view " + v);
         int points = 0;
         ProgressBar progress_preloader = (ProgressBar) activity.findViewById(R.id.progress_preloader);
-
         progress_preloader.setVisibility(View.VISIBLE);
+
         for (int i = 0; i < 4; i++) {
             activity.getButtons()[i].setEnabled(false);
         }
@@ -62,17 +60,17 @@ public class AnswerListener implements View.OnClickListener {
     }
 
     public static void addNextTaskListener() {
-        int tasksPerDay = loadDailyLimit("dailyLimit", activity);
+        int tasksPerDay = loadDailyLimit(Constants.Cash.TASKS_DAILY_LIMIT_CASH, activity);
         RelativeLayout layoutWords = (RelativeLayout) activity.findViewById(R.id.layoutWords);
         ProgressBar task_progress_bar = (ProgressBar) activity.findViewById(R.id.task_progress_bar);
         ProgressBar progress_preloader = (ProgressBar) activity.findViewById(R.id.progress_preloader);
 
         progress_preloader.setVisibility(View.INVISIBLE);
+        addToDailyLimit(Constants.Cash.TASKS_DAILY_LIMIT_CASH, activity);
+        task_progress_bar.incrementProgressBy(10);
 
-        addToDailyLimit("dailyLimit", activity);
-        Log.d(TAG, "tasksPerDay " + tasksPerDay);
         if (tasksPerDay >= 9) {
-            putLastTaskTime("lastTaskTime", activity);
+            putLastTaskTime(Constants.Cash.LAST_TASK_TIME_CASH, activity);
             layoutWords.setOnClickListener(new ToUnitsListener(activity));
         } else {
             layoutWords.setOnClickListener(new NextTaskListener(layoutWords,activity));

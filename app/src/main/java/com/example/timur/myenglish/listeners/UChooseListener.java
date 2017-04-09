@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.timur.myenglish.controllers.Configs;
+import com.example.timur.myenglish.controllers.Constants;
 import com.example.timur.myenglish.controllers.Info;
 
 import static com.example.timur.myenglish.model.CashLoader.isEndedDailyLimit;
@@ -30,9 +31,9 @@ public class UChooseListener implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Calendar calendar = Calendar.getInstance();
-        isEndedDailyLimit("dailyLimit", calendar.getTimeInMillis(), activity);
+        isEndedDailyLimit(Constants.Cash.TASKS_DAILY_LIMIT_CASH, calendar.getTimeInMillis(), activity);
 
-        if (loadDailyLimit("dailyLimit", activity) >= 9) {
+        if (loadDailyLimit(Constants.Cash.TASKS_DAILY_LIMIT_CASH, activity) >= 9) {
             Toast toast = Toast.makeText(activity, "Sorry, come in tomorrow!", Toast.LENGTH_LONG);
             if (!toast.getView().isShown()) {
                 toast.show();

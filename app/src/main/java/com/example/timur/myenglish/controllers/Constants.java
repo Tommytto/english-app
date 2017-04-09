@@ -35,4 +35,12 @@ public class Constants {
         public static final String FIRSTSIGN = "FQsMsoArQ5";
         public static final String UPDATEUNIT = "6n0l2HdZch" ;
     }
+
+    public class Cash {
+        public static final String UNIT_ID_CASH = "UNIT_ID_CASH";
+        public static final String USER_ID_CASH = "USER_ID_CASH";
+        public static final String LAST_TASK_TIME_CASH = "LAST_TASK_TIME_CASH";
+        public static final String AUTH_TOKEN_CASH = "AUTH_TOKEN_CASH";
+        public static final String TASKS_DAILY_LIMIT_CASH = "TASKS_DAILY_LIMIT_CASH";
+    }
 }
